@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#0b1220" />
+  <title>ChaeDoll · Portfolio</title>
+  <meta name="description" content="XR · Computer Vision · Web/App 개발 포트폴리오" />
+  <style>
+    :root{
+      --bg:#0b1220; --panel:#0f1a33; --card:#111f3d;
+      --text:#e8eefc; --muted:#a9b6d8; --line:#213257;
+      --accent:#6aa8ff; --accent2:#8bffda;
+      --shadow: 0 10px 30px rgba(0,0,0,.35);
+      --radius: 16px;
+      --max: 1080px;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0; font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, "Noto Sans KR", Arial, sans-serif;
+      background: radial-gradient(1200px 600px at 20% -10%, rgba(106,168,255,.25), transparent 60%),
+                  radial-gradient(900px 500px at 90% 0%, rgba(139,255,218,.16), transparent 55%),
+                  var(--bg);
+      color:var(--text);
+    }
+    a{color:inherit; text-decoration:none}
+    .wrap{max-width:var(--max); margin:0 auto; padding:24px}
+    .topbar{
+      position:sticky; top:0; z-index:10;
+      backdrop-filter: blur(10px);
+      background: rgba(11,18,32,.55);
+      border-bottom:1px solid rgba(33,50,87,.55);
+    }
+    .nav{
+      display:flex; align-items:center; justify-content:space-between;
+      gap:16px; padding:14px 24px;
+      max-width:var(--max); margin:0 auto;
+    }
+    .brand{display:flex; align-items:center; gap:10px; font-weight:700; letter-spacing:.2px}
+    .dot{
+      width:10px; height:10px; border-radius:999px;
+      background: linear-gradient(135deg, var(--accent), var(--accent2));
+      box-shadow: 0 0 18px rgba(106,168,255,.55);
+    }
+    .navlinks{display:flex; flex-wrap:wrap; gap:10px; justify-content:flex-end}
+    .pill{
+      font-size:13px; color:var(--muted);
+      padding:8px 10px; border:1px solid rgba(33,50,87,.75);
+      border-radius:999px; background: rgba(15,26,51,.55);
+    }
+    .pill:hover{border-color:rgba(106,168,255,.75); color:var(--text)}
+    header.hero{
+      padding:34px 0 10px;
+    }
+    .heroGrid{
+      display:grid; grid-template-columns: 1.3fr .7fr; gap:18px;
+      align-items:stretch;
+    }
+    @media (max-width: 900px){
+      .heroGrid{grid-template-columns:1fr}
+    }
+    .panel{
+      background: linear-gradient(180deg, rgba(17,31,61,.85), rgba(15,26,51,.65));
+      border:1px solid rgba(33,50,87,.75);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding:18px;
+    }
+    .title{
+      font-size:34px; line-height:1.15; margin:0 0 10px;
+      letter-spacing:-.4px;
+    }
+    .subtitle{margin:0; color:var(--muted); line-height:1.6}
+    .badges{display:flex; flex-wrap:wrap; gap:8px; margin-top:14px}
+    .badge{
+      font-size:12px; padding:7px 10px;
+      border-radius:999px;
+      border:1px solid rgba(33,50,87,.75);
+      background: rgba(17,31,61,.65);
+      color: var(--muted);
+    }
+    .ctaRow{display:flex; gap:10px; flex-wrap:wrap; margin-top:16px}
+    .btn{
+      display:inline-flex; align-items:center; gap:8px;
+      padding:10px 12px; border-radius:12px;
+      border:1px solid rgba(33,50,87,.85);
+      background: rgba(17,31,61,.75);
+      color:var(--text);
+    }
+    .btn.primary{
+      background: linear-gradient(135deg, rgba(106,168,255,.95), rgba(139,255,218,.75));
+      border-color: transparent;
+      color:#081022;
+      font-weight:700;
+    }
+    .btn:hover{transform: translateY(-1px)}
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(12, 1fr);
+      gap:14px;
+    }
+    section{padding:16px 0}
+    .secTitle{
+      display:flex; align-items:flex-end; justify-content:space-between; gap:12px;
+      margin:10px 0 10px;
+    }
+    h2{
+      margin:0;
+      font-size:18px; letter-spacing:-.2px;
+    }
+    .hint{color:var(--muted); font-size:13px}
+    .card{
+      grid-column: span 6;
+      background: rgba(17,31,61,.65);
+      border:1px solid rgba(33,50,87,.75);
+      border-radius: var(--radius);
+      padding:14px;
+    }
+    .card:hover{border-color: rgba(106,168,255,.6)}
+    .card h3{margin:0 0 6px; font-size:15px}
+    .meta{color:var(--muted); font-size:12px; margin:0 0 10px; line-height:1.5}
+    .tags{display:flex; flex-wrap:wrap; gap:6px; margin-top:10px}
+    .tag{
+      font-size:11px; color:var(--muted);
+      padding:5px 8px; border-radius:999px;
+      border:1px solid rgba(33,50,87,.7);
+      background: rgba(15,26,51,.45);
+    }
+    .linkRow{display:flex; gap:8px; flex-wrap:wrap; margin-top:10px}
+    .smallLink{
+      font-size:12px; color:var(--text);
+      padding:7px 9px; border-radius:10px;
+      border:1px solid rgba(33,50,87,.75);
+      background: rgba(15,26,51,.45);
+    }
+    .smallLink:hover{border-color: rgba(139,255,218,.55)}
+    .full{grid-column: span 12}
+    .col4{grid-column: span 4}
+    .col8{grid-column: span 8}
+    @media (max-width: 900px){
+      .card{grid-column: span 12}
+      .col4,.col8{grid-column: span 12}
+    }
+    footer{
+      padding:24px 0 50px;
+      color:var(--muted);
+      border-top:1px solid rgba(33,50,87,.55);
+      margin-top:20px;
+    }
+    .kbd{
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+      font-size:12px;
+      padding:2px 6px;
+      border:1px solid rgba(33,50,87,.75);
+      border-bottom-color: rgba(33,50,87,.45);
+      border-radius:8px;
+      background: rgba(15,26,51,.45);
+      color: var(--muted);
+    }
+  </style>
+</head>
+
+<body>
+  <div class="topbar">
+    <div class="nav">
+      <div class="brand">
+        <span class="dot" aria-hidden="true"></span>
+        <span>Ch
