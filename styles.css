@@ -254,6 +254,53 @@ section {
     font-weight: 300;
 }
 
+.item-title-en {
+    font-size: 0.85rem;
+    font-weight: 300;
+    color: var(--color-text-light);
+    font-style: italic;
+    line-height: 1.5;
+}
+
+.item.journal {
+    border-left: 2px solid var(--color-text);
+    padding-left: 0.85rem;
+}
+
+.item.journal .item-title {
+    font-weight: 500;
+}
+
+.badge {
+    display: inline-block;
+    font-size: 0.6rem;
+    font-weight: 600;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+    padding: 0.1rem 0.35rem;
+    border: 1px solid var(--color-text-light);
+    color: var(--color-text-light);
+    vertical-align: middle;
+    margin-left: 0.4rem;
+    line-height: 1.5;
+}
+
+.item-link {
+    display: inline-flex;
+    align-items: center;
+    color: var(--color-text-light);
+    text-decoration: none;
+    margin-left: 0.35rem;
+    vertical-align: middle;
+    transition: color 0.2s ease;
+    position: relative;
+    top: -1px;
+}
+
+.item-link:hover {
+    color: var(--color-text);
+}
+
 /* Contact Section */
 .contact {
     border-top: 1px solid var(--color-border);
