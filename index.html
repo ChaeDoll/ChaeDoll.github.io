@@ -1,38 +1,56 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chaeyun Lim</title>
+    <title>Chaeyun Lim | AI · Wireless Networking · XR</title>
+    <meta name="description" content="Integrated M.S.–Ph.D. student at Myongji University (DAN Lab.), researching Artificial Intelligence, Wireless Networking (Wi-Fi MAC), and Extended Reality.">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Chaeyun Lim">
+    <meta property="og:description" content="Artificial Intelligence, Wireless Networking, Extended Reality">
+    <meta property="og:url" content="https://chaedoll.github.io/">
+    <meta property="og:image" content="https://chaedoll.github.io/image/profile.jpg">
+    <meta name="twitter:card" content="summary">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <noscript><style>.tab-list{display:none}.tab-panel{display:block;margin-bottom:var(--spacing-md)}</style></noscript>
 </head>
 <body>
-    <nav class="nav">
+    <a class="skip-link" href="#main">Skip to content</a>
+    <nav class="nav" aria-label="Primary">
         <div class="nav-content">
             <a href="#home" class="nav-link active">Home</a>
             <a href="#about" class="nav-link">About</a>
             <a href="#experience" class="nav-link">Experience</a>
             <a href="#publications" class="nav-link">Publications</a>
+            <a href="#awards" class="nav-link">Awards</a>
             <a href="#contact" class="nav-link">Contact</a>
+            <div class="lang-toggle" role="group" aria-label="Language">
+                <button class="lang-btn active" data-lang="en" aria-pressed="true">EN</button>
+                <span class="lang-sep">|</span>
+                <button class="lang-btn" data-lang="ko" aria-pressed="false">KR</button>
+            </div>
         </div>
     </nav>
 
-    <main>
+    <main id="main">
         <section id="home" class="hero">
             <div class="hero-content">
                 <div class="profile-image">
                     <img src="image/profile.jpg" alt="Chaeyun Lim Profile">
                 </div>
-                <p class="greeting">Hello, I'm</p>
-                <h1 class="name">Chaeyun Lim</h1>
-                <p class="name-kr">임채윤</p>
-                <p class="role">Integrated M.S.–Ph.D. Student</p>
+                <p class="greeting" data-ko="">Hello, I'm</p>
+                <h1 class="name" data-ko="임채윤">Chaeyun Lim</h1>
+                <p class="name-kr" data-ko="Chaeyun Lim">임채윤</p>
+                <p class="role" data-ko="명지대학교 인공지능융합학과">Integrated M.S.–Ph.D. Student in Applied Artificial Intelligence</p>
+                <p class="affiliation" data-ko="석박사통합과정">Myongji University, South Korea</p>
                 <div class="divider"></div>
-                <p class="bio">
-                    Exploring the convergence of Artificial Intelligence, Communication Systems and Extended Reality to shape the future of immersive technologies.
+                <p class="bio" data-ko="인공지능, 무선 네트워크, 확장현실이 만나는 지점을 연구합니다.">
+                    Exploring the convergence of Artificial Intelligence, Wireless Networking and Extended Reality.
                 </p>
             </div>
         </section>
@@ -40,8 +58,25 @@
         <section id="about" class="about">
             <div class="section-content">
                 <h2 class="section-title">Research Interests</h2>
-                <p class="about-intro">Communication Systems · Artificial Intelligence · Extended Reality</p>
-                <p class="about-intro">Integrated M.S.–Ph.D. Program @ Myongji University (DAN Lab.)</p>
+                <p class="about-intro" data-ko="인공지능(AI) · 무선 네트워크(Wi-Fi MAC) · 확장현실(XR)">Artificial Intelligence (AI) · Wireless Networking (Wi-Fi MAC) · Extended Reality (XR)</p>
+                <p class="about-intro" data-ko="명지대학교 인공지능융합학과 석박사통합과정 (<a href=&quot;https://danlab.mju.ac.kr&quot; target=&quot;_blank&quot; class=&quot;text-link&quot;>DAN 연구실</a>)">Integrated M.S.–Ph.D. Program in Applied Artificial Intelligence @ Myongji University (<a href="https://danlab.mju.ac.kr" target="_blank" class="text-link">DAN Lab.</a>)</p>
+
+                <p class="about-text" data-ko="학습 기반 기법으로 무선 네트워크를 더 효율적으로 만들고, 이를 몰입형 미디어 전송에 활용하는 연구를 하고 있습니다.">I study how learning-based methods can make wireless networks more efficient, and how those networks can better support immersive media.</p>
+
+                <ul class="research-list">
+                    <li>
+                        <span class="topic-name" data-ko="Wi-Fi MAC와 지연 시간">Wi-Fi MAC &amp; Latency</span>
+                        <span class="topic-desc" data-ko="IEEE 802.11bn에서 동적 QoS 트래픽의 Tail Latency를 줄이기 위한 강화학습 기반 Contention Window 제어">Reinforcement-learning-based contention window control for IEEE 802.11bn to reduce tail latency under dynamic QoS traffic.</span>
+                    </li>
+                    <li>
+                        <span class="topic-name" data-ko="Ad Hoc 네트워크 분산 학습">Distributed Learning over Ad Hoc Networks</span>
+                        <span class="topic-desc" data-ko="UAV 및 무선 Ad Hoc 환경을 위한 통신 효율적 연합학습 (Baton-FL, Chain FL)">Communication-efficient federated learning (Baton-FL, Chain FL) for UAV and wireless ad hoc environments.</span>
+                    </li>
+                    <li>
+                        <span class="topic-name" data-ko="몰입형 3D 미디어">Immersive 3D Media</span>
+                        <span class="topic-desc" data-ko="XR 콘텐츠의 효율적 전송을 위한 ROI 인지 포인트 클라우드 다운샘플링과 3D 객체 탐지">ROI-aware point cloud downsampling and 3D detection for efficient transmission of XR content.</span>
+                    </li>
+                </ul>
             </div>
         </section>
 
@@ -49,41 +84,50 @@
             <div class="section-content">
                 <h2 class="section-title">Experience</h2>
 
-                <div class="timeline">
+                <div class="pub-section">
+                    <h3 class="subsection-title">Education &amp; Research</h3>
+                    <div class="timeline">
                     <div class="timeline-item">
-                        <span class="timeline-date">2025.03 - Present</span>
-                        <h3>Integrated M.S.–Ph.D. Student</h3>
-                        <p>Myongji University · DAN Lab.</p>
-                    </div>
-
-                    <div class="timeline-item">
-                        <span class="timeline-date">2025.10 - 2026.02</span>
-                        <h3>XREAL 9th OB</h3>
-                        <p>XR·AI United Society · Dev Team</p>
-                    </div>
-
-                    <div class="timeline-item">
-                        <span class="timeline-date">2025.03 - 2025.08</span>
-                        <h3>XREAL 8th Leader</h3>
-                        <p>XR·AI United Society · Dev Team Lead</p>
-                    </div>
-
-                    <div class="timeline-item">
-                        <span class="timeline-date">2024.09 - 2025.02</span>
-                        <h3>XREAL 7th Junior</h3>
-                        <p>XR·AI United Society · Dev Team</p>
+                        <span class="timeline-date" data-ko="2025.03 - 현재">2025.03 - Present</span>
+                        <h3 data-ko="인공지능융합학과 석박사통합과정">Integrated M.S.–Ph.D. in Applied Artificial Intelligence</h3>
+                        <p data-ko="명지대학교 · <a href=&quot;https://danlab.mju.ac.kr&quot; target=&quot;_blank&quot; class=&quot;text-link&quot;>DAN 연구실</a>">Myongji University · <a href="https://danlab.mju.ac.kr" target="_blank" class="text-link">DAN Lab.</a></p>
                     </div>
 
                     <div class="timeline-item">
                         <span class="timeline-date">2024.05 - 2025.02</span>
-                        <h3>Undergraduate Researcher</h3>
-                        <p>Myongji University · DAN Lab.</p>
+                        <h3 data-ko="학부 연구생">Undergraduate Researcher</h3>
+                        <p data-ko="명지대학교 · <a href=&quot;https://danlab.mju.ac.kr&quot; target=&quot;_blank&quot; class=&quot;text-link&quot;>DAN 연구실</a>">Myongji University · <a href="https://danlab.mju.ac.kr" target="_blank" class="text-link">DAN Lab.</a></p>
                     </div>
 
                     <div class="timeline-item">
                         <span class="timeline-date">2019.03 - 2025.02</span>
-                        <h3>B.E. in ICE · Valedictorian</h3>
-                        <p>Myongji University</p>
+                        <h3 data-ko="정보통신공학 학사 · 수석 졸업">B.E. in ICE · Valedictorian</h3>
+                        <p data-ko="명지대학교">Myongji University</p>
+                    </div>
+                    </div>
+                </div>
+
+                <div class="pub-section">
+                    <h3 class="subsection-title">Activities</h3>
+                    <p class="group-note" data-ko="XR·AI 연합학회 (연합동아리)">XR·AI United Society</p>
+                    <div class="timeline">
+                    <div class="timeline-item">
+                        <span class="timeline-date">2025.10 - 2026.02</span>
+                        <h3 data-ko="XREAL 9기 OB">XREAL 9th OB</h3>
+                        <p data-ko="개발팀">Dev Team</p>
+                    </div>
+
+                    <div class="timeline-item">
+                        <span class="timeline-date">2025.03 - 2025.08</span>
+                        <h3 data-ko="XREAL 8기 리더">XREAL 8th Leader</h3>
+                        <p data-ko="개발팀장">Dev Team Lead</p>
+                    </div>
+
+                    <div class="timeline-item">
+                        <span class="timeline-date">2024.09 - 2025.02</span>
+                        <h3 data-ko="XREAL 7기 주니어">XREAL 7th Junior</h3>
+                        <p data-ko="개발팀">Dev Team</p>
+                    </div>
                     </div>
                 </div>
             </div>
@@ -91,25 +135,59 @@
 
         <section id="publications" class="publications">
             <div class="section-content">
-                <h2 class="section-title">Publications & Awards</h2>
+                <h2 class="section-title">Publications</h2>
 
                 <div class="pub-section">
-                    <h3 class="subsection-title">Papers</h3>
-                    <div class="item-list">
+                    <div class="tab-list" role="tablist">
+                        <button class="tab-btn active" role="tab" id="tab-pub-journals" aria-selected="true" aria-controls="pub-journals" tabindex="0" data-target="pub-journals">Journals<span class="tab-count"></span></button>
+                        <button class="tab-btn" role="tab" id="tab-pub-intl" aria-selected="false" aria-controls="pub-intl" tabindex="-1" data-target="pub-intl"><span class="tab-full">International Conference</span><span class="tab-short">Int. Conference</span><span class="tab-count"></span></button>
+                        <button class="tab-btn" role="tab" id="tab-pub-kor" aria-selected="false" aria-controls="pub-kor" tabindex="-1" data-target="pub-kor"><span class="tab-full">Domestic Conference</span><span class="tab-short">Dom. Conference</span><span class="tab-count"></span></button>
+                    </div>
+                    <div class="tab-panel active" id="pub-journals" role="tabpanel" aria-labelledby="tab-pub-journals" tabindex="0">
+                        <div class="item-list">
                         <div class="item">
-                            <span class="item-date">2026.06</span>
-                            <div class="item-content">
-                                <p class="item-title">Baton-FL: Distributed Federated Learning via Model Passing for UAV Ad Hoc Networks<a href="https://github.com/ChaeDoll/ai-federatedlearning-batonfl" target="_blank" class="item-link" aria-label="GitHub"><svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg></a></p>
-                                <p class="item-title-en">Baton-FL: UAV Ad Hoc 네트워크에서의 모델 패싱 기반 분산 연합학습</p>
-                                <p class="item-meta">2026 KICS Summer Annual Conference · Poster</p>
-                            </div>
-                        </div>
-
-                        <div class="item journal">
                             <span class="item-date">2026.04</span>
                             <div class="item-content">
                                 <p class="item-title">Adaptive Point Cloud Downsampling Based on 3-D ROI Detection for Improved Perceptual Quality<a href="https://ieeexplore.ieee.org/document/11501269" target="_blank" class="item-link" aria-label="Published"><svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a></p>
-                                <p class="item-meta">IEEE Access<span class="badge">SCIE</span></p>
+                                <p class="item-authors">Chaeyun Lim, Seunghyun Park, Hyunhee Park</p>
+                                <p class="item-meta">IEEE Access, vol. 15, pp. 68039–68053<span class="badge">SCIE</span></p>
+                                <p class="item-meta">DOI: <a href="https://doi.org/10.1109/ACCESS.2026.3689278" target="_blank" class="text-link">10.1109/ACCESS.2026.3689278</a></p>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                    <div class="tab-panel" id="pub-intl" role="tabpanel" aria-labelledby="tab-pub-intl" tabindex="0">
+                        <div class="item-list">
+                        <div class="item">
+                            <span class="item-date">2026.09</span>
+                            <div class="item-content">
+                                <p class="item-title">Chain Federated Learning: Communication-Efficient Serverless FedAvg for Wireless Ad Hoc Networks<a href="https://link.springer.com/chapter/10.1007/978-3-032-38477-5_3" target="_blank" class="item-link" aria-label="Published"><svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a></p>
+                                <p class="item-authors">Chaeyun Lim, Hyunhee Park</p>
+                                <p class="item-meta">The 29th International Conference on Network-Based Information Systems (NBiS 2026) · Osaka, Japan · Oral Presentation<span class="badge">SCOPUS</span><span class="badge">Best Paper</span></p>
+                                <p class="item-meta">DOI: <a href="https://doi.org/10.1007/978-3-032-38477-5_3" target="_blank" class="text-link">10.1007/978-3-032-38477-5_3</a></p>
+                            </div>
+                        </div>
+
+                        <div class="item">
+                            <span class="item-date">2025.11</span>
+                            <div class="item-content">
+                                <p class="item-title">Adaptive ROI-Aware Point Cloud Downsampling for 3D Media Transmission<a href="https://link.springer.com/chapter/10.1007/978-3-032-10347-5_6" target="_blank" class="item-link" aria-label="Published"><svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a></p>
+                                <p class="item-authors">Chaeyun Lim, Yongho Kim, Hyunhee Park</p>
+                                <p class="item-meta">International Conference on Broadband and Wireless Computing, Communication and Applications (BWCCA 2025) · UAE (Online) · Oral Presentation<span class="badge">SCOPUS</span></p>
+                                <p class="item-meta">DOI: <a href="https://doi.org/10.1007/978-3-032-10347-5_6" target="_blank" class="text-link">10.1007/978-3-032-10347-5_6</a></p>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                    <div class="tab-panel" id="pub-kor" role="tabpanel" aria-labelledby="tab-pub-kor" tabindex="0">
+                        <div class="item-list">
+                        <div class="item">
+                            <span class="item-date">2026.06</span>
+                            <div class="item-content">
+                                <p class="item-title">Baton-FL: Distributed Federated Learning via Model Passing for UAV Ad Hoc Networks<a href="https://www.dbpia.co.kr/journal/articleDetail?nodeId=NODE12964468" target="_blank" class="item-link" aria-label="Published"><svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a><a href="https://github.com/ChaeDoll/ai-federatedlearning-batonfl" target="_blank" class="item-link" aria-label="GitHub"><svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg></a></p>
+                                <p class="item-title-en">Baton-FL: UAV Ad Hoc 네트워크에서의 모델 패싱 기반 분산 연합학습<a href="https://www.dbpia.co.kr/journal/articleDetail?nodeId=NODE12964468" target="_blank" class="item-link" aria-label="Published"><svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a><a href="https://github.com/ChaeDoll/ai-federatedlearning-batonfl" target="_blank" class="item-link" aria-label="GitHub"><svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg></a></p>
+                                <p class="item-authors" data-ko="임채윤, 박현희">Chaeyun Lim, Hyunhee Park</p>
+                                <p class="item-meta" data-ko="2026 한국통신학회 하계종합학술발표회 · 제주 · 포스터 발표">Summer Annual Conference of the Korean Institute of Communications and Information Sciences (KICS Summer 2026) · Jeju, Korea · Poster Presentation</p>
                             </div>
                         </div>
 
@@ -118,33 +196,28 @@
                             <div class="item-content">
                                 <p class="item-title">Multi-head DQN-Based Adaptive Contention Window Exponent Control for IEEE 802.11bn P95 Latency Reduction in Dynamic QoS Traffic Environments</p>
                                 <p class="item-title-en">동적 QoS 트래픽 환경에서의 IEEE 802.11bn Tail Latency 감소를 위한 Multi-head DQN 기반 적응형 Contention Window 지수 제어</p>
-                                <p class="item-meta">JCCI 2026 · Oral Presentation</p>
+                                <p class="item-authors" data-ko="임채윤, 박현희">Chaeyun Lim, Hyunhee Park</p>
+                                <p class="item-meta" data-ko="제36회 통신정보 합동학술대회 (JCCI 2026) · 여수 · 구두 발표">Joint Conference on Communications and Information (JCCI 2026) · Yeosu, Korea · Oral Presentation</p>
                             </div>
                         </div>
 
                         <div class="item">
                             <span class="item-date">2026.02</span>
                             <div class="item-content">
-                                <p class="item-title">Geometry-guided Multi-View Data Augmentation from a Single Image with Generative Completion</p>
-                                <p class="item-title-en">단일 이미지 기반 기하 일관 다중 시점 합성과 생성적 보완을 이용한 데이터 증강</p>
-                                <p class="item-meta">KICS Winter Annual Conference · Haedong Outstanding Paper Award</p>
-                            </div>
-                        </div>
-
-                        <div class="item">
-                            <span class="item-date">2025.11</span>
-                            <div class="item-content">
-                                <p class="item-title">Adaptive ROI-Aware Point Cloud Downsampling for 3D Media Transmission</p>
-                                <p class="item-meta">BWCCA 2025<span class="badge">SCOPUS</span></p>
+                                <p class="item-title">Geometry-guided Multi-View Data Augmentation from a Single Image with Generative Completion<a href="https://www.dbpia.co.kr/journal/articleDetail?nodeId=NODE12738174" target="_blank" class="item-link" aria-label="Published"><svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a></p>
+                                <p class="item-title-en">단일 이미지 기반 기하 일관 다중 시점 합성과 생성적 보완을 이용한 데이터 증강<a href="https://www.dbpia.co.kr/journal/articleDetail?nodeId=NODE12738174" target="_blank" class="item-link" aria-label="Published"><svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a></p>
+                                <p class="item-authors" data-ko="임채윤, 박현희">Chaeyun Lim, Hyunhee Park</p>
+                                <p class="item-meta" data-ko="2026 한국통신학회 동계종합학술발표회 · 용평 · 구두 발표<span class=&quot;badge&quot;>Outstanding Paper</span>">Winter Annual Conference of the Korean Institute of Communications and Information Sciences (KICS Winter 2026) · Yongpyeong, Korea · Oral Presentation<span class="badge">Outstanding Paper</span></p>
                             </div>
                         </div>
 
                         <div class="item">
                             <span class="item-date">2025.09</span>
                             <div class="item-content">
-                                <p class="item-title">3D Object Detection based on Multi-Axis Plane Projection for ROI-Preserving Point Cloud Downsampling</p>
-                                <p class="item-title-en">다축 평면 투영 기반 3D 객체 탐지를 활용한 ROI 보존형 포인트 클라우드 다운샘플링</p>
-                                <p class="item-meta">KAIC 2025 · Outstanding Paper Award</p>
+                                <p class="item-title">3D Object Detection based on Multi-Axis Plane Projection for ROI-Preserving Point Cloud Downsampling<a href="https://www.dbpia.co.kr/journal/articleDetail?nodeId=NODE12416342" target="_blank" class="item-link" aria-label="Published"><svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a></p>
+                                <p class="item-title-en">다축 평면 투영 기반 3D 객체 탐지를 활용한 ROI 보존형 포인트 클라우드 다운샘플링<a href="https://www.dbpia.co.kr/journal/articleDetail?nodeId=NODE12416342" target="_blank" class="item-link" aria-label="Published"><svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a></p>
+                                <p class="item-authors" data-ko="임채윤, 박현희">Chaeyun Lim, Hyunhee Park</p>
+                                <p class="item-meta" data-ko="제6회 한국 인공지능 학술대회 (KAIC 2025) · 제주 · 구두 발표<span class=&quot;badge&quot;>Outstanding Paper</span>">Korea Artificial Intelligence Conference (KAIC 2025) · Jeju, Korea · Oral Presentation<span class="badge">Outstanding Paper</span></p>
                             </div>
                         </div>
 
@@ -153,66 +226,106 @@
                             <div class="item-content">
                                 <p class="item-title">An Idea Proposal for Egocentric 3D Pose Estimation Using Wi-Fi CSI</p>
                                 <p class="item-title-en">Wi-Fi CSI 기반 일인칭 시점에서의 3D 자세 추정 아이디어 제안</p>
-                                <p class="item-meta">JCCI 2025</p>
+                                <p class="item-authors" data-ko="임채윤, 박현희">Chaeyun Lim, Hyunhee Park</p>
+                                <p class="item-meta" data-ko="제35회 통신정보 합동학술대회 (JCCI 2025) · 속초 · 구두 발표">Joint Conference on Communications and Information (JCCI 2025) · Sokcho, Korea · Oral Presentation</p>
                             </div>
                         </div>
 
                         <div class="item">
                             <span class="item-date">2025.02</span>
                             <div class="item-content">
-                                <p class="item-title">CBAM-YOLO11pico: On Smartphones and VR/AR Devices Proposing an Ultra-lightweight Model for Real-Time Object Detection</p>
-                                <p class="item-title-en">CBAM-YOLO11pico: 스마트폰 및 VR/AR 디바이스에서의 실시간 객체 탐지를 위한 초경량 모델</p>
-                                <p class="item-meta">KICS Winter Annual Conference</p>
+                                <p class="item-title">CBAM-YOLO11pico: On Smartphones and VR/AR Devices Proposing an Ultra-lightweight Model for Real-Time Object Detection<a href="https://www.dbpia.co.kr/journal/articleDetail?nodeId=NODE12132270" target="_blank" class="item-link" aria-label="Published"><svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a></p>
+                                <p class="item-title-en">CBAM-YOLO11pico: 스마트폰 및 VR/AR 디바이스에서의 실시간 객체 탐지를 위한 초경량 모델 제안<a href="https://www.dbpia.co.kr/journal/articleDetail?nodeId=NODE12132270" target="_blank" class="item-link" aria-label="Published"><svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a></p>
+                                <p class="item-authors" data-ko="임채윤, 박현희">Chaeyun Lim, Hyunhee Park</p>
+                                <p class="item-meta" data-ko="2025 한국통신학회 동계종합학술발표회 (인공지능 분야) · 용평 · 학부논문 포스터 발표">Winter Annual Conference of the Korean Institute of Communications and Information Sciences (KICS Winter 2025) · Yongpyeong, Korea · Undergraduate Poster Presentation</p>
                             </div>
                         </div>
 
                         <div class="item">
                             <span class="item-date">2024.11</span>
                             <div class="item-content">
-                                <p class="item-title">Development of MR-based AI Companion Contents for Utilizing XR·AI technology in Daily life</p>
-                                <p class="item-title-en">MR 기반 인공지능 컴패니언 콘텐츠 개발</p>
-                                <p class="item-meta">KICS Autumn Annual Conference</p>
+                                <p class="item-title">Development of MR-based AI Companion Contents for Utilizing XR·AI technology in Daily life<a href="https://www.dbpia.co.kr/journal/articleDetail?nodeId=NODE12035114" target="_blank" class="item-link" aria-label="Published"><svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a></p>
+                                <p class="item-title-en">일상 생활에서의 XR·AI 기술 활용을 위한 MR 기반 인공지능 컴패니언 콘텐츠 개발<a href="https://www.dbpia.co.kr/journal/articleDetail?nodeId=NODE12035114" target="_blank" class="item-link" aria-label="Published"><svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a></p>
+                                <p class="item-authors" data-ko="임채윤, 장소현, 박현희">Chaeyun Lim, Sohyeon Jang, Hyunhee Park</p>
+                                <p class="item-meta" data-ko="2024 한국통신학회 추계종합학술발표회 (VR/AR 분야) · 경주 · 학부논문 포스터 발표">Autumn Annual Conference of the Korean Institute of Communications and Information Sciences (KICS Autumn 2024) · Gyeongju, Korea · Undergraduate Poster Presentation</p>
                             </div>
+                        </div>
                         </div>
                     </div>
                 </div>
+            </div>
+        </section>
+
+        <section id="awards" class="awards">
+            <div class="section-content">
+                <h2 class="section-title">Awards &amp; Honors</h2>
 
                 <div class="pub-section">
                     <h3 class="subsection-title">Awards</h3>
                     <div class="item-list">
                         <div class="item">
+                            <span class="item-date">2026.09</span>
+                            <div class="item-content">
+                                <p class="item-title">Best Paper Award, The 29th International Conference on Network-Based Information Systems (NBiS-2026)</p>
+                                <p class="item-title-en">제29회 NBiS-2026 국제학술대회 최우수논문상</p>
+                                <p class="item-meta" data-ko="Chaeyun Lim, Hyunhee Park, “Chain Federated Learning: Communication-Efficient Serverless FedAvg for Wireless Ad Hoc Networks”">Chaeyun Lim, Hyunhee Park, “Chain Federated Learning: Communication-Efficient Serverless FedAvg for Wireless Ad Hoc Networks”</p>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <span class="item-date">2026.07</span>
+                            <div class="item-content">
+                                <p class="item-title">Excellence Award, Gyeonggi RISE G7 (AI) Industry-Coupled PBL (IC-PBL+) Competition</p>
+                                <p class="item-title-en">경기 RISE G7 (AI분야) IC-PBL+ 경진대회 우수상</p>
+                            </div>
+                        </div>
+                        <div class="item">
                             <span class="item-date">2026.02</span>
                             <div class="item-content">
-                                <p class="item-title">KICS Haedong Outstanding Paper Award</p>
+                                <p class="item-title">Outstanding Paper Award (Haedong Award), Korean Institute of Communications and Information Sciences (KICS)</p>
                                 <p class="item-title-en">한국통신학회 해동우수논문상</p>
+                                <p class="item-meta" data-ko="임채윤, 박현희, “단일 이미지 기반 기하 일관 다중 시점 합성과 생성적 보완을 이용한 데이터 증강”">Chaeyun Lim, Hyunhee Park, “Geometry-guided Multi-View Data Augmentation from a Single Image with Generative Completion”</p>
                             </div>
                         </div>
                         <div class="item">
                             <span class="item-date">2025.09</span>
                             <div class="item-content">
-                                <p class="item-title">KAIC Outstanding Paper Award</p>
+                                <p class="item-title">Outstanding Paper Award, Korea Artificial Intelligence Conference (KAIC 2025)</p>
                                 <p class="item-title-en">한국 인공지능 학술대회 우수논문상</p>
+                                <p class="item-meta" data-ko="임채윤, 박현희, “다축 평면 투영 기반 3D 객체 탐지를 활용한 ROI 보존형 포인트 클라우드 다운샘플링”">Chaeyun Lim, Hyunhee Park, “3D Object Detection based on Multi-Axis Plane Projection for ROI-Preserving Point Cloud Downsampling”</p>
                             </div>
                         </div>
                         <div class="item">
                             <span class="item-date">2025.02</span>
                             <div class="item-content">
-                                <p class="item-title">Valedictorian, Dept. of ICE, Myongji University</p>
+                                <p class="item-title">Valedictorian (Top of Graduating Class), Dept. of Information and Communication Engineering, Myongji University</p>
                                 <p class="item-title-en">명지대학교 정보통신공학과 수석 졸업</p>
                             </div>
                         </div>
                         <div class="item">
                             <span class="item-date">2024.10</span>
                             <div class="item-content">
-                                <p class="item-title">Metaverse Developer Competition · Encouragement Award</p>
+                                <p class="item-title">Encouragement Award, XR Developer Challenge (Metaverse Developer Competition)</p>
                                 <p class="item-title-en">메타버스 개발자 경진대회 장려상</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pub-section">
+                    <h3 class="subsection-title">Scholarships</h3>
+                    <div class="item-list">
+                        <div class="item">
+                            <span class="item-date">2026.06</span>
+                            <div class="item-content">
+                                <p class="item-title">Merit Scholarship for Master's Students in Science & Engineering, Korea Student Aid Foundation (KOSAF)</p>
+                                <p class="item-title-en">한국장학재단 이공계 석사 우수 장학생</p>
                             </div>
                         </div>
                         <div class="item">
                             <span class="item-date">2023.06</span>
                             <div class="item-content">
-                                <p class="item-title">National Science & Engineering Excellence Scholarship</p>
-                                <p class="item-title-en">이공계 국가 우수 장학생</p>
+                                <p class="item-title">National Science & Technology Scholarship, Korea Student Aid Foundation (KOSAF)</p>
+                                <p class="item-title-en">한국장학재단 이공계 국가 우수 장학생</p>
                             </div>
                         </div>
                     </div>
@@ -244,22 +357,34 @@
             <div class="section-content">
                 <h2 class="section-title">Get in Touch</h2>
                 <div class="contact-grid">
+                    <a href="cv/CV_Chaeyun_Lim.pdf" class="contact-item" target="_blank" rel="noopener">
+                        <span class="contact-label">CV</span>
+                        <span class="contact-arrow">→</span>
+                    </a>
                     <a href="https://github.com/ChaeDoll" class="contact-item" target="_blank">
                         <span class="contact-label">GitHub</span>
                         <span class="contact-arrow">→</span>
                     </a>
-                    <div class="contact-item email-item">
+                    <div class="contact-item email-item" role="button" tabindex="0" aria-expanded="false" aria-controls="email-tooltip">
                         <span class="contact-label">Email</span>
                         <span class="contact-arrow">→</span>
-                        <div class="email-tooltip">
-                            <p class="email-type">University</p>
+                        <div class="email-tooltip" id="email-tooltip">
+                            <p class="email-type" data-ko="학교">University</p>
                             <p class="email-address">dlacodbs0627 [at] mju.ac.kr</p>
-                            <p class="email-type">Personal</p>
+                            <p class="email-type" data-ko="개인">Personal</p>
                             <p class="email-address">dlacodbs0627 [at] gmail.com</p>
                         </div>
                     </div>
-                    <a href="https://linkedin.com/in/yourprofile" class="contact-item" target="_blank">
+                    <a href="https://www.linkedin.com/in/chaeyun-lim" class="contact-item" target="_blank">
                         <span class="contact-label">LinkedIn</span>
+                        <span class="contact-arrow">→</span>
+                    </a>
+                    <a href="https://scholar.google.com/citations?user=oMBpSgMAAAAJ" class="contact-item" target="_blank" rel="noopener">
+                        <span class="contact-label">Google Scholar</span>
+                        <span class="contact-arrow">→</span>
+                    </a>
+                    <a href="https://orcid.org/0009-0005-4468-5894" class="contact-item" target="_blank" rel="noopener">
+                        <span class="contact-label">ORCID</span>
                         <span class="contact-arrow">→</span>
                     </a>
                 </div>
