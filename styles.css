@@ -767,3 +767,83 @@ button:focus-visible,
         transition: none !important;
     }
 }
+
+/* Hero profile links */
+.hero-links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-top: var(--spacing-md);
+}
+
+.hero-link {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.75rem;
+    height: 2.75rem;
+    color: var(--color-text);
+    text-decoration: none;
+    transition: opacity 0.2s ease;
+}
+
+.hero-link svg {
+    width: 20px;
+    height: 20px;
+}
+
+.hero-link:hover,
+.hero-link:focus-visible {
+    opacity: 0.65;
+}
+
+.hero-link::after {
+    content: attr(data-tip);
+    position: absolute;
+    top: calc(100% + 8px);
+    left: 50%;
+    transform: translateX(-50%) translateY(-4px);
+    padding: 0.25rem 0.55rem;
+    background: var(--color-text);
+    color: var(--color-bg);
+    font-size: 0.72rem;
+    white-space: nowrap;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity 0.15s ease, transform 0.15s ease;
+}
+
+.hero-link:hover::after,
+.hero-link:focus-visible::after {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-50%) translateY(0);
+}
+
+/* Brand colors for filled icons */
+.hero-link--orcid svg {
+    color: #acc880;
+}
+
+.hero-link--linkedin svg {
+    color: #7aa1cd;
+}
+
+@media (prefers-color-scheme: dark) {
+    .hero-link--linkedin svg {
+        color: #93b7df;
+    }
+}
+
+.hero-link--scholar svg {
+    color: #7d7d7d;
+}
+
+@media (prefers-color-scheme: dark) {
+    .hero-link--scholar svg {
+        color: #a5a5a5;
+    }
+}
