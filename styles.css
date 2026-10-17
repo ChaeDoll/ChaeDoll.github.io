@@ -510,6 +510,21 @@ section {
     border-top: 1px solid var(--color-border);
 }
 
+.projects {
+    border-top: 1px solid var(--color-border);
+}
+
+.section-title + .section-note {
+    margin: -2.5rem 0 2.5rem;
+    font-size: 0.9rem;
+    font-weight: 300;
+    color: var(--color-text-light);
+}
+
+html[lang="ko"] .section-title + .section-note {
+    font-weight: 400;
+}
+
 @media (max-width: 768px) {
     .tab-list {
         gap: var(--spacing-sm);
@@ -846,4 +861,28 @@ button:focus-visible,
     .hero-link--scholar svg {
         color: #a5a5a5;
     }
+}
+
+/* Show more / less */
+.item-list:not(.is-expanded) > .item.is-extra {
+    display: none;
+}
+
+.show-more {
+    margin-top: var(--spacing-md);
+    padding: 0;
+    background: none;
+    border: none;
+    border-bottom: 1px solid var(--color-border);
+    font-family: inherit;
+    font-size: 0.85rem;
+    font-weight: 400;
+    color: var(--color-text-light);
+    cursor: pointer;
+    transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+.show-more:hover {
+    color: var(--color-text);
+    border-bottom-color: var(--color-text);
 }

@@ -116,6 +116,8 @@ function setLang(lang) {
         btn.setAttribute('aria-pressed', active ? 'true' : 'false');
     });
 
+    refreshShowMore();
+
     try {
         localStorage.setItem('lang', lang);
     } catch (e) {}
@@ -171,3 +173,45 @@ if (emailItem) {
         if (e.key === 'Escape') setEmailOpen(false);
     });
 }
+
+
+// "Show more": lists with more than LIMIT items show the first LIMIT, rest on demand
+const SHOW_LIMIT = 5;
+const SHOW_LABELS = {
+    en: { more: 'Show more', less: 'Show less' },
+    ko: { more: '더보기', less: '접기' }
+};
+
+function refreshShowMore() {
+    const lang = document.documentElement.lang === 'ko' ? 'ko' : 'en';
+    document.querySelectorAll('.show-more').forEach(btn => {
+        const expanded = btn.getAttribute('aria-expanded') === 'true';
+        const extra = btn.dataset.extra;
+        btn.textContent = expanded
+            ? SHOW_LABELS[lang].less
+            : `${SHOW_LABELS[lang].more} (${extra})`;
+    });
+}
+
+document.querySelectorAll('.item-list').forEach(list => {
+    const items = Array.from(list.querySelectorAll(':scope > .item'));
+    if (items.length <= SHOW_LIMIT) return;
+
+    const extraItems = items.slice(SHOW_LIMIT);
+    extraItems.forEach(item => item.classList.add('is-extra'));
+
+    const btn = document.createElement('button');
+    btn.type = 'button';
+    btn.className = 'show-more';
+    btn.dataset.extra = extraItems.length;
+    btn.setAttribute('aria-expanded', 'false');
+    list.after(btn);
+
+    btn.addEventListener('click', () => {
+        const expanded = btn.getAttribute('aria-expanded') === 'true';
+        list.classList.toggle('is-expanded', !expanded);
+        btn.setAttribute('aria-expanded', expanded ? 'false' : 'true');
+        refreshShowMore();
+    });
+});
+refreshShowMore();
